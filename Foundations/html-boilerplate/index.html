@@ -10,9 +10,9 @@
         <h1>Hello World!</h1>
     </header>
 
-    <main>
-        <article>
-            <h2>Lorem Ipsum</h2>
+    <main role="main">
+        <article role="article" aria-labelledby="lorem-heading">
+            <h2 id="lorem-heading">Lorem Ipsum</h2>
             <p><strong>Lorem ipsum</strong> <em>dolor sit amet consectetur adipisicing elit</em>. 
                 Doloremque exercitationem asperiores, 
                 ea sit voluptas nemo excepturi suscipit vel, 
@@ -20,43 +20,43 @@
                 Sapiente illo repellendus dicta incidunt suscipit.</p>
         </article>
 
-        <section>
-            <h2>Lists</h2>
-            <section>
-                <h3>Favourite Food</h3>
-                <ul>
-                    <li>Pizza</li>
-                    <li>Chicken</li>
-                    <li>Burger</li>
+        <section role="region" aria-labelledby="lists-heading">
+            <h2 id="lists-heading">Lists</h2>
+            <section role="region" aria-labelledby="food-heading">
+                <h3 id="food-heading">Favourite Food</h3>
+                <ul role="list">
+                    <li role="listitem">Pizza</li>
+                    <li role="listitem">Chicken</li>
+                    <li role="listitem">Burger</li>
                 </ul>
             </section>
 
-            <section>
-                <h3>To Do</h3>
-                <ol>
-                    <li>Clean Room</li>
-                    <li>Gym</li>
-                    <li>Meditate</li>
+            <section role="region" aria-labelledby="todo-heading">
+                <h3 id="todo-heading">To Do</h3>
+                <ol role="list">
+                    <li role="listitem">Clean Room</li>
+                    <li role="listitem">Gym</li>
+                    <li role="listitem">Meditate</li>
                 </ol>
             </section>
 
-            <section>
-                <h3>Travel</h3>
-                <ul>
-                    <li>Shanghai</li>
-                    <li>Beijing</li>
-                    <li>Tokyo</li>
+            <section role="region" aria-labelledby="travel-heading">
+                <h3 id="travel-heading">Travel</h3>
+                <ul role="list">
+                    <li role="listitem">Shanghai</li>
+                    <li role="listitem">Beijing</li>
+                    <li role="listitem">Tokyo</li>
                 </ul>
             </section>
-            
-            <section>
-                <h3>Favourite Games</h3>
-                <ol>
-                    <li>Counter-Strike</li>
-                    <li>Dota 2</li>
-                    <li>Rocket League</li>
-                    <li>Poker</li>
-                    <li>Chess</li>
+
+            <section role="region" aria-labelledby="games-heading">
+                <h3 id="games-heading">Favourite Games</h3>
+                <ol role="list">
+                    <li role="listitem">Counter-Strike</li>
+                    <li role="listitem">Dota 2</li>
+                    <li role="listitem">Rocket League</li>
+                    <li role="listitem">Poker</li>
+                    <li role="listitem">Chess</li>
                 </ol>
             </section>
         </section>
