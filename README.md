@@ -14,8 +14,10 @@ This repository showcases my participation and projects.
 
 ### Foundations
 
-- **:** [](#)
-	- .
+- **HTML**
+	- [HTML Boilerplate](Foundations/html-boilerplate)
+	- [Odin Links and Images](Foundations/odin-links-and-images)
+	- [Odin Recipes](Foundations/odin-recipes)
 
 ### Intermediate HTML and CSS
 
