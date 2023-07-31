@@ -19,6 +19,7 @@ This repository showcases my participation and projects:
 	- [HTML Boilerplate](Foundations/html-boilerplate)
 	- [Odin Links and Images](Foundations/odin-links-and-images)
 	- [Odin Recipes](Foundations/odin-recipes)
+   	- [Landing Page](Foundations/landing-page)
 
 ### Intermediate HTML and CSS
 
