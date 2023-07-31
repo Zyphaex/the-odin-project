@@ -2,3 +2,17 @@
     margin: 0;
     padding: 0;
 }
+
+:root {
+    /* FONTS */
+    --fs-sm: 18px;
+    --fs-md: 24px;
+    --fs-lg: 36px;
+    --fs-xlg: 48px;
+
+    /* COLOURS */
+    --bkg: #1F2937;
+    --text-primary: #F9FAF8;
+    --text-secondary: #E5E7EB;
+    --btn: #3882F6;
+}
