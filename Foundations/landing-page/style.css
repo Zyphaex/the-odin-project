@@ -16,3 +16,24 @@
     --text-secondary: #E5E7EB;
     --btn: #3882F6;
 }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bkg);
+}
+
+main {
+    background-color: var(--text-primary);
+}
+
+h1 {
+    color: var(--text-primary);
+}
+
+.dark {
+    background-color: var(--bkg);
+}
+
+.grey{
+    background-color: var(--text-secondary);
+}
