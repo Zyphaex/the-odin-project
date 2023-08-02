@@ -20,6 +20,8 @@ This repository showcases my participation and projects:
 	- [Odin Links and Images](Foundations/odin-links-and-images)
 	- [Odin Recipes](Foundations/odin-recipes)
 	- [Landing Page](Foundations/landing-page)
+- **JavaScript**
+	- [Rock Paper Scissors](Foundations/rock-paper-scissors)
 
 ### Intermediate HTML and CSS
 
