@@ -20,20 +20,75 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--bkg);
+    font-size: var(--fs-sm);
+}
+
+header {
+    padding: 10px 50px;
+    font-size: var(--fs-md);
+    color: var(--text-primary);
 }
 
 main {
     background-color: var(--text-primary);
 }
 
+section {
+    padding: 150px 50px;
+    text-align: center;
+}
+
+footer {
+    padding: 25px;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
 h1 {
+    font-size: var(--fs-xlg);
     color: var(--text-primary);
 }
 
-.dark {
+h2 {
+    font-size: var(--fs-lg);
+}
+
+ul {
+    list-style: none;
+}
+
+a,
+a:visited {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.section-dark {
     background-color: var(--bkg);
 }
 
-.grey{
+.section-grey {
     background-color: var(--text-secondary);
+}
+
+.text-grey {
+    color: var(--text-secondary);
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.quote {
+    font-size: var(--fs-lg);
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.bold {
+    font-weight: bold;
 }
