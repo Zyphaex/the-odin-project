@@ -6,47 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="main.js"></script>
 </head>
 <body>
     <header>
         <nav>
-            <img href="#" alt="Header Logo">
-            <li>Link 1</li>
-            <li>Link 2</li>
-            <li>Link 3</li>
+            <div class="left">
+                <p class="logo">Header Logo</p>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </div>
         </nav>
+        <section class="intro">
+            <div class="left">
+                <h1>This website is awesome</h1>
+                <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Accusamus non quibusdam consectetur molestias voluptas 
+                    officiis nihil doloremque alias laborum, velit assumenda! 
+                    Libero similique deserunt eum dolor voluptatum sit atque a.</p>
+                <a class="sign-up-btn" href="#">Sign up</a>
+            </div>
+            <div class="right">
+                <img class="image" src="#" alt="Placeholder">
+            </div>
+        </section>
     </header>
     <main>
-        <section class="section-dark text-left">
-            <h1>This website is awesome</h1>
-            <p class="text-grey">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Accusamus non quibusdam consectetur molestias voluptas 
-                officiis nihil doloremque alias laborum, velit assumenda! 
-                Libero similique deserunt eum dolor voluptatum sit atque a.</p>
-            <a href="#">Sign up</a>
-            <img src="#" alt="Placeholder">
-        </section>
-        <section>
-            <h2>Some random information.</h2>
-            <ul>
-                <li><p>Lorem ipsum</p></li>
-                <li><p>Lorem ipsum</p></li>
-                <li><p>Lorem ipsum</p></li>
-                <li><p>Lorem ipsum</p></li>
-            </ul>
-        </section>
-        <section class="section-grey">
-            <p class="quote text-left">This is an inspiring quote</p>
-            <p class="bold text-right">-Thor, God of Thunder</p>
-        </section>
-        <section class="text-left">
-            <h3>Call to action! It's time!</h3>
-            <p>Sign up for out product by clicking that button right over there!</p>
-            <a href="#">Sign up</a>
+        <h2>Some random information.</h2>
+        <section class="card-container">
+            <div class="card">
+                <div class="card-item"></div>
+                <p>This is some subtext under an illustration or image</p>
+            </div>
+            <div class="card">
+                <div class="card-item"></div>
+                <p>This is some subtext under an illustration or image</p>
+            </div>
+            <div class="card">
+                <div class="card-item"></div>
+                <p>This is some subtext under an illustration or image</p>
+            </div>
+            <div class="card">
+                <div class="card-item"></div>
+                <p>This is some subtext under an illustration or image</p>
+            </div>
         </section>
     </main>
-    <footer class="section-dark">
+    <section class="quote">
+        <em>This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.</em>
+        <p>-Thor, God of Thunder</p>
+    </section>
+    <section class="call-to-action">
+        <div class="container">
+            <div class="left">
+                <strong>Call to action! It's time!</strong>
+                <p class="text">Sign up for out product by clicking that button right over there!</p>
+            </div>
+            <div class="left">
+                <a class="sign-up-btn" href="#">Sign up</a>
+            </div>
+        </div>
+    </section>
+    <footer>
         <p>Copyright © Samuel Hillier 2023</p>
     </footer>
 </body>
