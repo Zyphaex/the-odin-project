@@ -5,32 +5,32 @@ function getComputerChoice() {
     return CHOICES[randomIndex];
 }
 
-function getUserChoice() {
-    let choice = prompt("Enter your choice: rock, paper, or scissors (or 'exit' to quit)");
-    if (choice === null) {
+function getPlayerChoice() {
+    let playerChoice = prompt("Enter your choice: rock, paper, or scissors (or 'exit' to quit)");
+    if (playerChoice === null) {
         alert("Thanks for playing!");
         return null;
     }
     
-    choice = choice.toLowerCase();
+    playerChoice = playerChoice.trim().toLowerCase();
     
-    if (choice === "exit") {
+    if (playerChoice === "exit") {
         alert("Thanks for playing!");
         return null;
-    } else if (!CHOICES.includes(choice)) {
+    } else if (!CHOICES.includes(playerChoice)) {
         alert("Invalid choice. Please choose rock, paper, or scissors.");
-        return getUserChoice();
+        return getPlayerChoice();
     }
-    return choice;
+    return playerChoice;
 }
 
-function determineWinner(player, computer) {
-    if (player === computer) {
+function playRound(playerChoice, computerChoice) {
+    if (playerChoice === computerChoice) {
         return "It's a tie!";
     } else if (
-        (player === "rock" && computer === "scissors") ||
-        (player === "paper" && computer === "rock") ||
-        (player === "scissors" && computer === "paper")
+        (playerChoice === "rock" && computerChoice === "scissors") ||
+        (playerChoice === "paper" && computerChoice === "rock") ||
+        (playerChoice === "scissors" && computerChoice === "paper")
     ) {
         return "You win!";
     } else {
@@ -38,16 +38,16 @@ function determineWinner(player, computer) {
     }
 }
 
-function playRPS() {
+function playGame() {
     while (true) {
-        const playerChoice = getUserChoice();
+        const playerChoice = getPlayerChoice();
 
         if (!playerChoice) {
             break;
         }
 
         const computerChoice = getComputerChoice();
-        const result = determineWinner(playerChoice, computerChoice);
+        const result = playRound(playerChoice, computerChoice);
         const message = [
             `You chose ${playerChoice}.`,
             `Computer chose ${computerChoice}.`,
@@ -58,4 +58,4 @@ function playRPS() {
     }
 }
 
-playRPS();
+playGame();
