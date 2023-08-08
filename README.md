@@ -1,7 +1,7 @@
 # The Odin Project
 
 <div align="center">
-    <img src="https://raw.githubusercontent.com/Zyphaex/the-odin-project/main/the-odin-project.png" alt="The Odin Project" width="500">
+    <img src="https://raw.githubusercontent.com/Zyphaex/the-odin-project/main/logo/the-odin-project.png" alt="The Odin Project" width="500">
 </div>
 
 ---
@@ -16,12 +16,12 @@ This repository showcases my participation and projects:
 ### Foundations
 
 - **HTML**
-	- [HTML Boilerplate](Foundations/html-boilerplate)
-	- [Odin Links and Images](Foundations/odin-links-and-images)
-	- [Odin Recipes](Foundations/odin-recipes)
-	- [Landing Page](Foundations/landing-page)
+	- [HTML Boilerplate](foundations/html-boilerplate)
+	- [Odin Links and Images](foundations/odin-links-and-images)
+	- [Odin Recipes](foundations/odin-recipes)
+	- [Landing Page](foundations/landing-page)
 - **JavaScript**
-	- [Rock Paper Scissors](Foundations/rock-paper-scissors)
+	- [Rock Paper Scissors](foundations/rock-paper-scissors)
 
 ### Intermediate HTML and CSS
 
