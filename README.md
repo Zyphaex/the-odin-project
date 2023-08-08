@@ -1,7 +1,7 @@
 # The Odin Project
 
 <div align="center">
-    <img src="https://raw.githubusercontent.com/Zyphaex/the-odin-project/main/logo/the-odin-project.png" alt="The Odin Project" width="500">
+    <img src="https://raw.githubusercontent.com/Zyphaex/the-odin-project/main/the-odin-project/the-odin-project.png" alt="The Odin Project" width="500">
 </div>
 
 ---
