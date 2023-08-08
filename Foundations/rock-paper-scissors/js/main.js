@@ -11,14 +11,14 @@ const WIN_CONDITIONS = {
     scissors: "paper",
 };
 
+function displayMessage(message){
+    alert(message);
+}
+
 function getComputerChoice() {
     const randomIndex = Math.floor(Math.random() * CHOICES.length);
     return CHOICES[randomIndex];
 };
-
-function displayMessage(message){
-    alert(message);
-}
 
 function getPlayerChoice() {
     while (true) {
@@ -39,10 +39,6 @@ function getPlayerChoice() {
     }
 };
 
-function exitGame() {
-    displayMessage(MESSAGES.THANKS_FOR_PLAYING);
-};
-
 function playRound(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
         return "It's a tie!";
@@ -60,6 +56,10 @@ function displayResult(playerChoice, computerChoice, result) {
         result
     ].join('\n');
     displayMessage(message);
+};
+
+function exitGame() {
+    displayMessage(MESSAGES.THANKS_FOR_PLAYING);
 };
 
 function playGame() {
