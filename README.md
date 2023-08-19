@@ -9,7 +9,7 @@
 [The Odin Project](https://theodinproject.com/) (TOP) is an open-source curriculum for learning full-stack web development. Their mission is to provide a comprehensive curriculum to learn web development for free.
 
 This repository showcases my participation and projects:
-[View Live Demo](https://hillier.uk/the-odin-project/)
+[View Live Demo](https://zyphaex.github.io/the-odin-project/)
 
 ## Courses
 
