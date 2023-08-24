@@ -15,13 +15,14 @@ This repository showcases my participation and projects:
 
 ### Foundations
 
-- **HTML**
+- **HTML & CSS**
 	- [HTML Boilerplate](foundations/html-boilerplate)
 	- [Odin Links and Images](foundations/odin-links-and-images)
 	- [Odin Recipes](foundations/odin-recipes)
 	- [Landing Page](foundations/landing-page)
 - **JavaScript**
 	- [Rock Paper Scissors](foundations/rock-paper-scissors)
+	- [Etch-a-Sketch](foundations/etch-a-sketch)
 
 ### Intermediate HTML and CSS
 
