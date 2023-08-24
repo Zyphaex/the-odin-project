@@ -25,6 +25,17 @@ let computerScore = 0;
 function updateScoreDisplay() {
     document.getElementById("player-score").textContent = playerScore;
     document.getElementById("computer-score").textContent = computerScore;
+
+    if (playerScore === 5 || computerScore === 5) {
+        endGame()
+    }
+}
+
+function endGame() {
+    document.getElementById("rock").disabled = true;
+    document.getElementById("paper").disabled = true;
+    document.getElementById("scissors").disabled = true;
+    document.getElementById("play-again").style.display = "block";
 }
 
 function playRound(playerChoice, computerChoice) {
@@ -55,3 +66,13 @@ function playGame(playerChoice) {
 document.getElementById("rock").addEventListener("click", () => playGame("rock"));
 document.getElementById("paper").addEventListener("click", () => playGame("paper"));
 document.getElementById("scissors").addEventListener("click", () => playGame("scissors"));
+document.getElementById("play-again").addEventListener("click", () => {
+    playerScore = 0;
+    computerScore = 0;
+    document.getElementById("play-again").style.display = "none";
+    updateScoreDisplay();
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("rock").disabled = false;
+    document.getElementById("paper").disabled = false;
+    document.getElementById("scissors").disabled = false;
+});
