@@ -21,18 +21,22 @@ section {
     font-weight: bold;
 }
 
+#player-controls {
+    display: flex;
+}
+
 button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: #5c6469;
-  color: white;
-  margin: 5px;
-  transition: 0.3s ease;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #5c6469;
+    color: white;
+    margin: 5px;
+    transition: 0.3s ease;
 }
 
 button:hover {
-  background-color: #373c3f;
+    background-color: #373c3f;
 }
