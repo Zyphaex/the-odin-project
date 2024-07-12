@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* fonts */
+  --fs-100: 18px;
+  --fs-200: 24px;
+  --fs-300: 36px;
+  --fs-400: 48px;
+
+  --fw-light: 300;
+  --fw-extra: 800;
+
+  /* colours */
+  --bkg-dark: #1f2937;
+  --text: #f9faf8;
+  --blue: #3882f6;
+  --grey: #e5e7eb;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--fs-100);
+}
+
+h1 {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-extra);
+  color: var(--text);
+}
+
+a {
+  font-size: var(--fs-100);
+  color: var(--link);
+}
+
+.dark {
+  background-color: var(--bkg-dark);
+  color: var(--text);
+}
+
+.quote {
+  background-color: var(--grey);
+}
