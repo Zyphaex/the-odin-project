@@ -28,15 +28,39 @@ body {
   font-size: var(--fs-100);
 }
 
+nav {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+ul {
+  display: flex;
+  padding: 12px;
+  list-style: none;
+  align-items: center;
+  gap: 16px;
+}
+
+a {
+  color: var(--grey);
+  text-decoration: none;
+  transition: color 0.1s ease;
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+#logo {
+  font-size: var(--fs-200);
+  color: var(--text);
+}
+
 h1 {
   font-size: var(--fs-400);
   font-weight: var(--fw-extra);
   color: var(--text);
-}
-
-a {
-  font-size: var(--fs-100);
-  color: var(--link);
 }
 
 .dark {
