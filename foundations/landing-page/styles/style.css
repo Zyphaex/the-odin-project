@@ -14,6 +14,7 @@
   --fs-400: 48px;
 
   --fw-light: 300;
+  --fw-heavy: 600;
   --fw-extra: 800;
 
   /* colours */
@@ -21,6 +22,7 @@
   --text: #f9faf8;
   --blue: #3882f6;
   --grey: #e5e7eb;
+  --grey-dark: #6d747d;
 }
 
 body {
@@ -31,12 +33,13 @@ body {
 nav {
   display: flex;
   margin: 0 auto;
-  justify-content: space-around;
+  justify-content: space-between;
+  max-width: 70%;
 }
 
 ul {
   display: flex;
-  padding: 12px;
+  padding: 12px 0;
   list-style: none;
   align-items: center;
   gap: 16px;
@@ -54,7 +57,29 @@ a:hover {
 
 #logo {
   font-size: var(--fs-200);
+  font-weight: var(--fw-extra);
   color: var(--text);
+}
+
+.dark {
+  background-color: var(--bkg-dark);
+  color: var(--text);
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 70%;
+  padding: 150px 0;
+  min-height: 500px;
+  gap: 50px;
+}
+
+.container-left,
+.container-right {
+  width: 100%;
+  max-width: 50%;
 }
 
 h1 {
@@ -63,9 +88,27 @@ h1 {
   color: var(--text);
 }
 
-.dark {
-  background-color: var(--bkg-dark);
+.container-left p {
+  color: var(--grey);
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 30px;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 5px;
   color: var(--text);
+  font-weight: var(--fw-heavy);
+}
+
+.image {
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--grey-dark);
 }
 
 .quote {
