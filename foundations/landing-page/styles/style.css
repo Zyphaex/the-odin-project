@@ -71,3 +71,8 @@ h1 {
 .quote {
   background-color: var(--grey);
 }
+
+footer {
+  padding: 20px;
+  text-align: center;
+}
