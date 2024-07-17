@@ -14,15 +14,15 @@ This repository documents my personal progress through the course.
 
 ### Foundations
 
-| Project               | View Code                                                                                            | Live Preview                                                                                  |
-| --------------------- | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| HTML Boilerplate      | [View code](https://github.com/Zyphaex/the-odin-project/tree/main/foundations/html-boilerplate)      | [Live preview](https://zyphaex.github.io/the-odin-project/foundations/html-boilerplate/)      |
-| Odin Links and Images | [View code](https://github.com/Zyphaex/the-odin-project/tree/main/foundations/odin-links-and-images) | [Live preview](https://zyphaex.github.io/the-odin-project/foundations/odin-links-and-images/) |
-| Odin Recipes          | [View code](https://github.com/Zyphaex/the-odin-project/tree/main/foundations/odin-recipes)          | [Live preview](https://zyphaex.github.io/the-odin-project/foundations/odin-recipes/)          |
-| Landing Page          | [View code](https://github.com/Zyphaex/the-odin-project/tree/main/foundations/landing-page)          | [Live preview](https://zyphaex.github.io/the-odin-project/foundations/landing-page/)          |
-| Rock Paper Scissors   | [View code](https://github.com/Zyphaex/the-odin-project/tree/main/foundations/rock-paper-scissors)   | [Live preview](https://zyphaex.github.io/the-odin-project/foundations/rock-paper-scissors/)   |
-| Etch-a-Sketch         | [View code](https://github.com/Zyphaex/the-odin-project/tree/main/foundations/etch-a-sketch)         | [Live preview](https://zyphaex.github.io/the-odin-project/foundations/etch-a-sketch/)         |
-| Calculator            | [View code](https://github.com/Zyphaex/the-odin-project/tree/main/foundations/calculator)            | [Live preview](https://zyphaex.github.io/the-odin-project/foundations/calculator/)            |
+| Project | Description | GitHub | Preview |
+| - | - | - | - |
+| HTML Boilerplate | Basic boilerplate for a HTML document. | [View code](https://github.com/Zyphaex/the-odin-project/tree/main/foundations/html-boilerplate) | [View demo](https://zyphaex.github.io/the-odin-project/foundations/html-boilerplate/) |
+| Odin Links and Images | Basic example of using links and displaying an image. | [View code](https://github.com/Zyphaex/the-odin-project/tree/main/foundations/odin-links-and-images) | [View demo](https://zyphaex.github.io/the-odin-project/foundations/odin-links-and-images/) |
+| Odin Recipes | Basic recipe website. | [View code](https://github.com/Zyphaex/the-odin-project/tree/main/foundations/odin-recipes) | [View demo](https://zyphaex.github.io/the-odin-project/foundations/odin-recipes/) |
+| Landing Page | Basic landing page website created from a design provided. | [View code](https://github.com/Zyphaex/the-odin-project/tree/main/foundations/landing-page) | [View demo](https://zyphaex.github.io/the-odin-project/foundations/landing-page/) |
+| Rock Paper Scissors | JavaScript rock paper scissors game using DOM manipulation and an interactive UI. | [View code](https://github.com/Zyphaex/the-odin-project/tree/main/foundations/rock-paper-scissors) | [View demo](https://zyphaex.github.io/the-odin-project/foundations/rock-paper-scissors/) |
+| Etch-a-Sketch | JavaScript sketchpad using DOM manipulation and an interactive UI. | [View code](https://github.com/Zyphaex/the-odin-project/tree/main/foundations/etch-a-sketch) | [View demo](https://zyphaex.github.io/the-odin-project/foundations/etch-a-sketch/) |
+| Calculator | JavaScript calculator with advanced mathematics, keyboard support, and an interactive UI. | [View code](https://github.com/Zyphaex/the-odin-project/tree/main/foundations/calculator) | [View demo](https://zyphaex.github.io/the-odin-project/foundations/calculator/) |
 
 ## Security Vulnerabilities
 
