@@ -8,6 +8,7 @@
 
 :root {
   /* fonts */
+  --fs-50: 16px;
   --fs-100: 18px;
   --fs-200: 24px;
   --fs-300: 36px;
@@ -35,6 +36,7 @@ nav {
   margin: 0 auto;
   justify-content: space-between;
   max-width: 60%;
+  gap: 16px;
 }
 
 ul {
@@ -42,6 +44,7 @@ ul {
   padding: 12px 0;
   list-style: none;
   align-items: center;
+  text-wrap: nowrap;
   gap: 16px;
 }
 
@@ -77,8 +80,7 @@ a:hover {
   width: 100%;
   max-width: 60%;
   padding: 150px 0;
-  min-height: 500px;
-  gap: 50px;
+  gap: 25px;
 }
 
 .container-left,
@@ -90,17 +92,19 @@ a:hover {
 .container-right {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   width: 100%;
 }
 
 h1 {
   font-size: var(--fs-400);
   font-weight: var(--fw-extra);
-  color: var(--text);
+  color: var (--text);
 }
 
 .container-left p,
 .container-action p {
+  margin-top: 10px;
   color: var(--grey);
 }
 
@@ -114,7 +118,8 @@ button {
   font-size: var(--fs-100);
   font-weight: var(--fw-heavy);
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 button:hover {
@@ -124,11 +129,13 @@ button:hover {
 
 .image {
   height: 100%;
+  min-height: 200px;
   width: 500px;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   background-color: var(--grey-dark);
 }
 
@@ -146,7 +153,7 @@ button:hover {
 
 .container-cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 50px;
   padding: 20px 0;
 }
@@ -167,6 +174,7 @@ button:hover {
 
 .card p {
   margin-top: 10px;
+  max-width: 200px;
   font-size: var(--fs-100);
   text-align: center;
 }
@@ -196,6 +204,7 @@ blockquote footer {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  min-height: 150px;
   padding: 10px 100px;
   background-color: var(--blue);
   border-radius: 10px;
@@ -216,4 +225,53 @@ blockquote footer {
 footer {
   padding: 20px;
   text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .container-cards {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0;
+  }
+
+  ul {
+    font-size: var(--fs-50);
+    padding: 0;
+  }
+
+  .container {
+    max-width: 90%;
+    flex-direction: column;
+    padding: 50px 0;
+  }
+
+  .container-left,
+  .container-right {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .container-page {
+    max-width: 90%;
+    padding: 50px 0;
+  }
+
+  .container-action {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  blockquote {
+    max-width: 90%;
+    padding: 50px 0;
+    font-size: var(--fs-200);
+  }
 }
