@@ -59,6 +59,11 @@ a:hover {
   font-size: var(--fs-200);
   font-weight: var(--fw-extra);
   color: var(--text);
+  transition: color 0.1s ease;
+}
+
+#logo:hover {
+  color: var(--blue);
 }
 
 .dark {
@@ -82,13 +87,20 @@ a:hover {
   max-width: 50%;
 }
 
+.container-right {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
 h1 {
   font-size: var(--fs-400);
   font-weight: var(--fw-extra);
   color: var(--text);
 }
 
-.container-left p {
+.container-left p,
+.container-action p {
   color: var(--grey);
 }
 
@@ -99,13 +111,20 @@ button {
   border: none;
   border-radius: 5px;
   color: var(--text);
+  font-size: var(--fs-100);
   font-weight: var(--fw-heavy);
-  text-wrap: nowrap;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--text);
+  color: var(--blue);
 }
 
 .image {
   height: 100%;
+  width: 500px;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -141,11 +160,8 @@ button {
 
 .card-image {
   outline: 3px solid var(--blue);
-  width: 100%;
   width: 200px;
   height: 200px;
-  min-height: 200px;
-  min-width: 200px;
   border-radius: 5px;
 }
 
@@ -178,6 +194,7 @@ blockquote footer {
 .container-action {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   padding: 10px 100px;
   background-color: var(--blue);
@@ -186,14 +203,14 @@ blockquote footer {
   gap: 20px;
 }
 
-.container-action p {
-  color: var(--grey);
-}
-
 .container-action button {
   margin: 0;
   border: 2px solid var(--text);
-  float: right;
+}
+
+.container-action button:hover {
+  background-color: var(--text);
+  color: var(--blue);
 }
 
 footer {
