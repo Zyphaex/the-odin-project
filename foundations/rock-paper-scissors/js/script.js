@@ -54,39 +54,61 @@ function displayScores(scores) {
   console.log(`You: ${scores.human}\nComputer: ${scores.computer}`);
 }
 
-function playGame() {
-  console.log("Welcome to Rock, Paper, Scissors!");
+function askPlayAgain() {
+  let message = "Would you like to play again? (y/n)";
+  let playAgain;
+  do {
+    playAgain = prompt(message);
+    if (playAgain === null) return null;
 
-  const scores = { human: 0, computer: 0 };
-  const rounds = 5;
-
-  const outcomes = {
-    rock: { rock: "tie", paper: "lose", scissors: "win" },
-    paper: { rock: "win", paper: "tie", scissors: "lose" },
-    scissors: { rock: "lose", paper: "win", scissors: "tie" },
-  };
-
-  for (let round = 1; round <= rounds; round++) {
-    console.log(`Round #${round}`);
-    console.log(QUESTION);
-    const humanSelection = getHumanChoice();
-    if (humanSelection === null) {
-      console.log("Thanks for playing!");
-      return;
+    playAgain = playAgain.trim().toLowerCase();
+    if (playAgain !== "y" && playAgain !== "n") {
+      message = `${ERROR_INVALID_INPUT} Would you like to play again? (y/n)`;
     }
-    const computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection, outcomes, scores);
-    displayScores(scores);
-  }
+  } while (playAgain !== "y" && playAgain !== "n");
+  return playAgain;
+}
 
-  console.log("Game over!");
-  if (scores.human > scores.computer) {
-    console.log("You won!");
-  } else if (scores.human < scores.computer) {
-    console.log("You lost!");
-  } else {
-    console.log("It's a tie!");
-  }
+function playGame() {
+  let playAgain;
+  do {
+    console.log("Welcome to Rock, Paper, Scissors!");
+
+    const scores = { human: 0, computer: 0 };
+    const rounds = 5;
+
+    const outcomes = {
+      rock: { rock: "tie", paper: "lose", scissors: "win" },
+      paper: { rock: "win", paper: "tie", scissors: "lose" },
+      scissors: { rock: "lose", paper: "win", scissors: "tie" },
+    };
+
+    for (let round = 1; round <= rounds; round++) {
+      console.log(`Round #${round}`);
+      console.log(QUESTION);
+      const humanSelection = getHumanChoice();
+      if (humanSelection === null) {
+        console.log("Thanks for playing!");
+        return;
+      }
+      const computerSelection = getComputerChoice();
+      playRound(humanSelection, computerSelection, outcomes, scores);
+      displayScores(scores);
+    }
+
+    console.log("Game over!");
+    if (scores.human > scores.computer) {
+      console.log("You won!");
+    } else if (scores.human < scores.computer) {
+      console.log("You lost!");
+    } else {
+      console.log("It's a tie!");
+    }
+
+    playAgain = askPlayAgain();
+  } while (playAgain === "y");
+
+  console.log("Thanks for playing!");
 }
 
 playGame();
