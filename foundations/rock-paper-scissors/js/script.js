@@ -1,5 +1,8 @@
 const choices = ["rock", "paper", "scissors"];
-const QUESTION = "Rock, paper, or scissors?";
+const MESSAGE_WELCOME = "Welcome to Rock, Paper, Scissors!";
+const MESSAGE_GOODBYE = "Thanks for playing!";
+const QUESTION_CHOICE = "Rock, paper, or scissors?";
+const QUESTION_PLAY_AGAIN = "Would you like to play again? (y/n)";
 const ERROR_INVALID_INPUT = "Invalid input.";
 
 function getComputerChoice() {
@@ -8,7 +11,7 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  let message = QUESTION;
+  let message = QUESTION_CHOICE;
   let choice;
   do {
     choice = prompt(message);
@@ -16,7 +19,7 @@ function getHumanChoice() {
 
     choice = choice.trim().toLowerCase();
     if (!choices.includes(choice)) {
-      message = `${ERROR_INVALID_INPUT} ${QUESTION}`;
+      message = `${ERROR_INVALID_INPUT} ${QUESTION_CHOICE}`;
     }
   } while (!choices.includes(choice));
   return choice;
@@ -55,7 +58,7 @@ function displayScores(scores) {
 }
 
 function askPlayAgain() {
-  let message = "Would you like to play again? (y/n)";
+  let message = QUESTION_PLAY_AGAIN;
   let playAgain;
   do {
     playAgain = prompt(message);
@@ -63,7 +66,7 @@ function askPlayAgain() {
 
     playAgain = playAgain.trim().toLowerCase();
     if (playAgain !== "y" && playAgain !== "n") {
-      message = `${ERROR_INVALID_INPUT} Would you like to play again? (y/n)`;
+      message = `${ERROR_INVALID_INPUT} ${QUESTION_PLAY_AGAIN}`;
     }
   } while (playAgain !== "y" && playAgain !== "n");
   return playAgain;
@@ -72,7 +75,7 @@ function askPlayAgain() {
 function playGame() {
   let playAgain;
   do {
-    console.log("Welcome to Rock, Paper, Scissors!");
+    console.log(MESSAGE_WELCOME);
 
     const scores = { human: 0, computer: 0 };
     const rounds = 5;
@@ -85,10 +88,10 @@ function playGame() {
 
     for (let round = 1; round <= rounds; round++) {
       console.log(`Round #${round}`);
-      console.log(QUESTION);
+      console.log(QUESTION_CHOICE);
       const humanSelection = getHumanChoice();
       if (humanSelection === null) {
-        console.log("Thanks for playing!");
+        console.log(MESSAGE_GOODBYE);
         return;
       }
       const computerSelection = getComputerChoice();
@@ -108,7 +111,7 @@ function playGame() {
     playAgain = askPlayAgain();
   } while (playAgain === "y");
 
-  console.log("Thanks for playing!");
+  console.log(MESSAGE_GOODBYE);
 }
 
 playGame();
