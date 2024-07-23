@@ -10,21 +10,6 @@ function getComputerChoice() {
   return choices[index];
 }
 
-function getHumanChoice() {
-  let message = QUESTION_CHOICE;
-  let choice;
-  do {
-    choice = prompt(message);
-    if (choice === null) return null;
-
-    choice = choice.trim().toLowerCase();
-    if (!choices.includes(choice)) {
-      message = `${ERROR_INVALID_INPUT} ${QUESTION_CHOICE}`;
-    }
-  } while (!choices.includes(choice));
-  return choice;
-}
-
 function capitalise(word) {
   return word.charAt(0).toUpperCase() + word.slice(1);
 }
@@ -36,16 +21,16 @@ function playRound(humanChoice, computerChoice, outcomes, scores) {
 
   switch (result) {
     case "tie":
-      console.log(`It's a tie, you both chose ${humanChoiceCapitalised}!`);
+      displayResult(`It's a tie, you both chose ${humanChoiceCapitalised}!`);
       break;
     case "win":
-      console.log(
+      displayResult(
         `You won! ${humanChoiceCapitalised} beats ${computerChoiceCapitalised}!`
       );
       scores.human++;
       break;
     case "lose":
-      console.log(
+      displayResult(
         `You lost! ${computerChoiceCapitalised} beats ${humanChoiceCapitalised}!`
       );
       scores.computer++;
@@ -54,64 +39,56 @@ function playRound(humanChoice, computerChoice, outcomes, scores) {
 }
 
 function displayScores(scores) {
-  console.log(`You: ${scores.human}\nComputer: ${scores.computer}`);
+  document.querySelector(
+    ".score"
+  ).innerText = `You: ${scores.human} Computer: ${scores.computer}`;
 }
 
-function askPlayAgain() {
-  let message = QUESTION_PLAY_AGAIN;
-  let playAgain;
-  do {
-    playAgain = prompt(message);
-    if (playAgain === null) return null;
-
-    playAgain = playAgain.trim().toLowerCase();
-    if (playAgain !== "y" && playAgain !== "n") {
-      message = `${ERROR_INVALID_INPUT} ${QUESTION_PLAY_AGAIN}`;
-    }
-  } while (playAgain !== "y" && playAgain !== "n");
-  return playAgain;
+function displayResult(message) {
+  document.querySelector(".result").innerText = message;
 }
 
 function playGame() {
-  let playAgain;
-  do {
-    console.log(MESSAGE_WELCOME);
+  const scores = { human: 0, computer: 0 };
+  const rounds = 5;
 
-    const scores = { human: 0, computer: 0 };
-    const rounds = 5;
+  const outcomes = {
+    rock: { rock: "tie", paper: "lose", scissors: "win" },
+    paper: { rock: "win", paper: "tie", scissors: "lose" },
+    scissors: { rock: "lose", paper: "win", scissors: "tie" },
+  };
 
-    const outcomes = {
-      rock: { rock: "tie", paper: "lose", scissors: "win" },
-      paper: { rock: "win", paper: "tie", scissors: "lose" },
-      scissors: { rock: "lose", paper: "win", scissors: "tie" },
-    };
+  let round = 1;
 
-    for (let round = 1; round <= rounds; round++) {
-      console.log(`Round #${round}`);
-      console.log(QUESTION_CHOICE);
-      const humanSelection = getHumanChoice();
-      if (humanSelection === null) {
-        console.log(MESSAGE_GOODBYE);
-        return;
+  function playNextRound(humanSelection) {
+    if (round > rounds) {
+      if (scores.human > scores.computer) {
+        displayResult("You won the game!");
+      } else if (scores.human < scores.computer) {
+        displayResult("You lost the game!");
+      } else {
+        displayResult("The game is a tie!");
       }
-      const computerSelection = getComputerChoice();
-      playRound(humanSelection, computerSelection, outcomes, scores);
-      displayScores(scores);
+      return;
     }
 
-    console.log("Game over!");
-    if (scores.human > scores.computer) {
-      console.log("You won!");
-    } else if (scores.human < scores.computer) {
-      console.log("You lost!");
-    } else {
-      console.log("It's a tie!");
-    }
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection, outcomes, scores);
+    displayScores(scores);
+    round++;
+  }
 
-    playAgain = askPlayAgain();
-  } while (playAgain === "y");
-
-  console.log(MESSAGE_GOODBYE);
+  document
+    .getElementById("rock")
+    .addEventListener("click", () => playNextRound("rock"));
+  document
+    .getElementById("paper")
+    .addEventListener("click", () => playNextRound("paper"));
+  document
+    .getElementById("scissors")
+    .addEventListener("click", () => playNextRound("scissors"));
 }
 
-playGame();
+document.addEventListener("DOMContentLoaded", () => {
+  playGame();
+});
