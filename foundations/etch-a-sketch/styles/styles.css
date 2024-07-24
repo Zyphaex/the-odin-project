@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 480px;
+  height: 480px;
+}
+
+.square {
+  width: calc(100% / 16);
+  padding-top: calc(100% / 16);
+  background-color: black;
+  border: 1px solid white;
+}
