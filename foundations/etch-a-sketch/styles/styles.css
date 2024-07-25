@@ -22,6 +22,5 @@ body {
 .square {
   width: calc(100% / 16);
   padding-top: calc(100% / 16);
-  background-color: black;
   border: 1px solid white;
 }
