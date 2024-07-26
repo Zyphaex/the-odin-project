@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".container");
+  const resetButton = document.querySelector("#reset");
   let isMouseDown = false;
 
   document.addEventListener("mousedown", function () {
@@ -28,6 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     container.appendChild(square);
   }
+
+  resetButton.addEventListener("click", function () {
+    const squares = document.querySelectorAll(".square");
+    squares.forEach((square) => {
+      square.style.backgroundColor = "black";
+    });
+  });
 
   function toggleColor(element) {
     element.style.backgroundColor = "gray";
