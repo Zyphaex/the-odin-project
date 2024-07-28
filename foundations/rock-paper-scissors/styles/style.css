@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightblue;
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  gap: 10px;
+}
+
+button {
+  padding: 50px;
+  background-color: lightyellow;
+  border: 2px solid lightgray;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background-color ease-in 0.1s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: beige;
+}
+
+.result {
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+  }
+}
